@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>School Day Discussion</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f7f7f7;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 800px;
+      margin: 20px auto;
+      background: #ffffff;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    .header {
+      display: flex;
+      position: relative;
+    }
+    .header div {
+      height: 40px;
+      width: 33.33%;
+    }
+    .blue {
+      background-color: #007bff;
+    }
+    .red {
+      background-color: #ff5722;
+    }
+    .green {
+      background-color: #4caf50;
+      position: relative;
+    }
+    .header-details {
+      position: absolute;
+      top: 10px;
+      left: 20px;
+      color: white;
+      font-size: 16px;
+      font-weight: bold;
+    }
+    .header-category {
+      position: absolute;
+      top: 10px;
+      right: 20px;
+      color: white;
+      font-size: 14px;
+      font-weight: bold;
+    }
+    .topic-card {
+      padding: 20px;
+      background-color: #ffffff;
+      border-top: 1px solid #ddd;
+      border-bottom: 1px solid #ddd;
+    }
+    .topic-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+    .topic-author {
+      font-size: 16px;
+      font-weight: bold;
+      color: #4caf50;
+    }
+    .topic-date {
+      font-size: 14px;
+      color: #888;
+    }
+    .topic-content {
+      font-size: 16px;
+      color: #555;
+      line-height: 1.6;
+    }
+    .response-card {
+      background: #ffffff;
+      margin: 20px 10px;
+      padding: 20px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    .response-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+    .response-author {
+      font-size: 16px;
+      font-weight: bold;
+      color: #4caf50;
+    }
+    .response-date {
+      font-size: 14px;
+      color: #888;
+    }
+    .response-content {
+      font-size: 16px;
+      color: #555;
+      line-height: 1.6;
+    }
+    .response-content img {
+      display: block;
+      max-width: 100%;
+      border-radius: 8px;
+      margin-top: 10px;
+    }
+    .reactions {
+      margin-top: 10px;
+      display: flex;
+      gap: 10px;
+    }
+    .reactions button {
+      padding: 10px 15px;
+      font-size: 14px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      background-color: #007bff;
+      color: #fff;
+    }
+    .reactions button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Header Section with Blue, Red, Green Blocks -->
+    <div class="header">
+      <div class="blue"></div>
+      <div class="red"></div>
+      <div class="green">
+        <div class="header-category">TEEN-Land</div>
+      </div>
+      <div class="header-details">
+        Group: 6th-graders
+      </div>
+    </div>
+
+    <!-- Topic Section -->
+    <div class="topic-card">
+      <div class="topic-header">
+        <span class="topic-author">Panda021</span>
+        <span class="topic-date">28 June</span>
+      </div>
+      <div class="topic-content">
+        <h2>Topic: What is your school day like?</h2>
+        <p>Where do you live? What is your school day like? What do you like most about your school?</p>
+      </div>
+    </div>
+
+    <!-- Response Section -->
+    <div class="response-card">
+      <div class="response-header">
+        <span class="response-author">Mikko</span>
+        <span class="response-date">30 June</span>
+      </div>
+      <div class="response-content">
+        <p>I’m from Espoo, Finland. My school day starts at 9 a.m. and ends at 2 p.m. We have classes like Maths, Dance and English.</p>
+        <p>In my school we do a lot of projects. Now we’re studying Mexico. We talk about the differences between Mexico and Finland in class. We also make a game about the differences and then play it. In this way we study History, ICT and Art all at the same time. I LOVE this way of learning!</p>
+        <p>There is a fifteen-minute break after every lesson. During the break, I go outside and play. At noon, we take a lunch break. The breaks connect us! 😜</p>
+        <img src="assets/school.png" alt="School building">
+      </div>
+      <div class="reactions">
+        <button id="like-button">Like (<span id="like-count">15</span>)</button>
+        <button>Comment</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- JavaScript -->
+  <script>
+    const likeButton = document.getElementById('like-button');
+    const likeCount = document.getElementById('like-count');
+
+    likeButton.addEventListener('click', () => {
+      // Increment the like count by 1
+      likeCount.textContent = parseInt(likeCount.textContent) + 1;
+    });
+  </script>
+</body>
+</html>
