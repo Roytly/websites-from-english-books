@@ -15,6 +15,8 @@
    git clone https://github.com/yourusername/websites-from-english-books.git
    cd websites-from-english-books
    ```
+   
+2. 打开目录中的blog.html
 
 ---
 
